@@ -18,7 +18,7 @@
 {% block field %}
     <noscript><p class="warning">{{ 'ERR.altchaJavaScriptRequired'|trans }}</p></noscript>
     {% if hasErrors.invoke() %}
-        <p class="error">{{ getErrorAsString.invoke() }}</p>
+        <p class="error" id="error_ctrl_{{ this.id }}">{{ getErrorAsString.invoke() }}</p>
     {% endif %}
 
     {% if not this.canUseAltcha %}
